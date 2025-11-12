@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: "yar",
+  name: "yarlang",
 
   extras: ($) => [/\s/, $.comment],
 
