@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: tree-sitter-yarlang
+Description: YarLang grammar for tree-sitter
+URL: @PROJECT_HOMEPAGE_URL@
+Version: @PROJECT_VERSION@
+Requires:
+Libs: -L${libdir} -ltree-sitter-yarlang
+Cflags: -I${includedir}

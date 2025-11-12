@@ -1,0 +1,28 @@
+{
+  "grammars": [
+    {
+      "name": "yarlang",
+      "path": ".",
+      "scope": "source.yar",
+      "file-types": ["yar"],
+      "injection-regex": "^(yar|yarlang)$",
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
+      "locals": "queries/locals.scm",
+      "tags": "queries/tags.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "YarLang Contributors",
+        "url": "https://github.com/yarlson/tree-sitter-yarlang"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/yarlson/tree-sitter-yarlang"
+    }
+  }
+}

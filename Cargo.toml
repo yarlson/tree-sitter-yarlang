@@ -1,0 +1,29 @@
+[package]
+name = "tree-sitter-yarlang"
+description = "YarLang grammar for the tree-sitter parsing library"
+version = "0.1.0"
+keywords = ["incremental", "parsing", "yarlang"]
+categories = ["parsing", "text-editors"]
+repository = "https://github.com/yarlson/tree-sitter-yarlang"
+edition = "2021"
+license = "MIT"
+authors = ["YarLang Contributors"]
+homepage = "https://github.com/yarlson/tree-sitter-yarlang"
+readme = "README.md"
+
+build = "bindings/rust/build.rs"
+include = [
+  "bindings/rust/*",
+  "grammar.js",
+  "queries/*",
+  "src/*",
+]
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter-language = "~0.1.0"
+
+[build-dependencies]
+cc = "1.0"
