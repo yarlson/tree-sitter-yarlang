@@ -1,5 +1,6 @@
 {
-  "name": "yar",
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "yarlang",
   "rules": {
     "source_file": {
       "type": "REPEAT",
@@ -999,12 +1000,21 @@
     }
   ],
   "conflicts": [
-    ["return_statement"],
-    ["expression_statement", "call_expression"],
-    ["expression_list", "call_expression"]
+    [
+      "return_statement"
+    ],
+    [
+      "expression_statement",
+      "call_expression"
+    ],
+    [
+      "expression_list",
+      "call_expression"
+    ]
   ],
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
