@@ -16,6 +16,37 @@ YarLang grammar for tree-sitter.
 
 ## Installation
 
+### Neovim (nvim-treesitter)
+
+Add to your nvim-treesitter configuration:
+
+```lua
+require('nvim-treesitter.parsers').get_parser_configs().yarlang = {
+  install_info = {
+    url = 'https://github.com/yarlson/tree-sitter-yarlang',
+    files = { 'src/parser.c' },
+    branch = 'main',
+  },
+  filetype = 'yar',
+}
+```
+
+Then install:
+
+```vim
+:TSInstall yarlang
+```
+
+**Note:** After installation, you'll need to manually copy the queries for syntax highlighting:
+
+```bash
+cp -r ~/.local/state/nvim/tree-sitter/yarlang/queries ~/.local/share/nvim/lazy/nvim-treesitter/queries/yarlang
+```
+
+Or if using a different package manager, adjust the path accordingly.
+
+> This manual step is required because yarlang is not yet part of nvim-treesitter's official parser list. A PR to add it officially is planned, which will make this step unnecessary.
+
 ### npm
 
 ```bash
