@@ -1,5 +1,5 @@
 ; Keywords
-"func" @keyword.function
+"fn" @keyword.function
 
 "return" @keyword.return
 
@@ -24,7 +24,10 @@
 (identifier) @variable
 
 ; Parameters
-(parameter_list (identifier) @variable.parameter)
+(parameter name: (identifier) @variable.parameter)
+
+; Type annotations
+(type_identifier) @type
 
 ; Function declarations
 (function_declaration

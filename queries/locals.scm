@@ -11,19 +11,22 @@
 ; Definitions
 
 (assignment_statement
-  targets: (identifier_list
-    (identifier) @local.definition))
+  target: (identifier) @local.definition)
 
 (function_declaration
   name: (identifier) @local.definition)
 
-(parameter_list
-  (identifier) @local.definition)
+(parameter
+  name: (identifier) @local.definition)
+
+(let_statement
+  name: (identifier) @local.definition)
+
+(short_declaration
+  name: (identifier) @local.definition)
 
 (for_statement
-  init: (assignment_statement
-    targets: (identifier_list
-      (identifier) @local.definition)))
+  variable: (identifier) @local.definition)
 
 ; References
 

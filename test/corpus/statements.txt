@@ -1,0 +1,177 @@
+================================================================================
+Let statement with type annotation
+================================================================================
+
+fn main() {
+    let x: i32 = 42
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        type: (type_identifier)
+        value: (number)))))
+
+================================================================================
+Short declaration
+================================================================================
+
+fn main() {
+    x := 42
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (short_declaration
+        name: (identifier)
+        value: (number)))))
+
+================================================================================
+Simple assignment
+================================================================================
+
+fn main() {
+    let mut x: i32 = 0
+    x = 42
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        type: (type_identifier)
+        value: (number))
+      (assignment_statement
+        target: (identifier)
+        value: (number)))))
+
+================================================================================
+While loop
+================================================================================
+
+fn main() {
+    while true {
+        break
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (while_statement
+        condition: (boolean)
+        body: (block
+          (break_statement))))))
+
+================================================================================
+For-in loop with range
+================================================================================
+
+fn main() {
+    for i in 0..10 {
+        continue
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (for_statement
+        variable: (identifier)
+        iterator: (range_expression
+          start: (number)
+          end: (number))
+        body: (block
+          (continue_statement))))))
+
+================================================================================
+Compound assignment operators
+================================================================================
+
+fn main() {
+    let mut x: i32 = 0
+    x += 1
+    x -= 1
+    x *= 2
+    x /= 2
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        type: (type_identifier)
+        value: (number))
+      (compound_assignment_statement
+        target: (identifier)
+        value: (number))
+      (compound_assignment_statement
+        target: (identifier)
+        value: (number))
+      (compound_assignment_statement
+        target: (identifier)
+        value: (number))
+      (compound_assignment_statement
+        target: (identifier)
+        value: (number)))))
+
+================================================================================
+Defer and unsafe statements
+================================================================================
+
+fn main() {
+    defer println("cleanup")
+
+    unsafe {
+        let p: *i32 = nil
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (defer_statement
+        expression: (call_expression
+          function: (identifier)
+          arguments: (argument_list
+            (string))))
+      (unsafe_block
+        body: (block
+          (let_statement
+            name: (identifier)
+            type: (pointer_type
+              element: (type_identifier))
+            value: (nil)))))))

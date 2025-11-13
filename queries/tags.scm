@@ -8,5 +8,4 @@
 
 ; Variable assignments
 (assignment_statement
-  targets: (identifier_list
-    (identifier) @name)) @definition.variable
+  target: (identifier) @name) @definition.variable

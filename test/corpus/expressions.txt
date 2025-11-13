@@ -1,0 +1,221 @@
+================================================================================
+Field access and indexing
+================================================================================
+
+fn main() {
+    let x = point.x
+    let y = arr[0]
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        value: (field_expression object: (identifier) field: (identifier)))
+      (let_statement
+        name: (identifier)
+        value: (index_expression object: (identifier) index: (number))))))
+
+================================================================================
+Char literals and number formats
+================================================================================
+
+fn main() {
+    let c = 'a'
+    let hex = 0xFF
+    let bin = 0b1010
+    let oct = 0o755
+    let flt = 1.5e10
+    let big = 1_000_000
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement name: (identifier) value: (char_literal))
+      (let_statement name: (identifier) value: (number))
+      (let_statement name: (identifier) value: (number))
+      (let_statement name: (identifier) value: (number))
+      (let_statement name: (identifier) value: (number))
+      (let_statement name: (identifier) value: (number)))))
+
+================================================================================
+Range expressions
+================================================================================
+
+fn main() {
+    for i in 0..10 {
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (for_statement
+        variable: (identifier)
+        iterator: (range_expression
+          start: (number)
+          end: (number))
+        body: (block)))))
+================================================================================
+Tuple, array, struct literals
+================================================================================
+
+fn main() {
+    let t = (1, 2, 3)
+    let a = [1, 2, 3]
+    let p = Point { x: 1.0, y: 2.0 }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        value: (tuple_expression
+          (number)
+          (number)
+          (number)))
+      (let_statement
+        name: (identifier)
+        value: (array_expression
+          (number)
+          (number)
+          (number)))
+      (let_statement
+        name: (identifier)
+        value: (struct_expression
+          name: (path
+            (identifier))
+          (field_initializer
+            field: (identifier)
+            value: (number))
+          (field_initializer
+            field: (identifier)
+            value: (number)))))))
+
+================================================================================
+Error propagation operator
+================================================================================
+
+fn main() {
+    let x = func()?
+    let y = result?.value
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        value: (propagate_expression
+          expression: (call_expression
+            function: (identifier)
+            arguments: (argument_list))))
+      (let_statement
+        name: (identifier)
+        value: (field_expression
+          object: (propagate_expression
+            expression: (identifier))
+          field: (identifier))))))
+
+================================================================================
+Bitwise and shift operators
+================================================================================
+
+fn main() {
+    let a = x & y
+    let b = x | y
+    let c = x ^ y
+    let d = x << 2
+    let e = x >> 2
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        value: (binary_expression
+          left: (identifier)
+          right: (identifier)))
+      (let_statement
+        name: (identifier)
+        value: (binary_expression
+          left: (identifier)
+          right: (identifier)))
+      (let_statement
+        name: (identifier)
+        value: (binary_expression
+          left: (identifier)
+          right: (identifier)))
+      (let_statement
+        name: (identifier)
+        value: (binary_expression
+          left: (identifier)
+          right: (number)))
+      (let_statement
+        name: (identifier)
+        value: (binary_expression
+          left: (identifier)
+          right: (number))))))
+
+================================================================================
+Reference operators
+================================================================================
+
+fn main() {
+    let x: i32 = 42
+    let r: &i32 = &x
+    let m: &mut i32 = &mut x
+    let v: i32 = *r
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        type: (type_identifier)
+        value: (number))
+      (let_statement
+        name: (identifier)
+        type: (reference_type element: (type_identifier))
+        value: (unary_expression operand: (identifier)))
+      (let_statement
+        name: (identifier)
+        type: (reference_type element: (type_identifier))
+        value: (unary_expression operand: (identifier)))
+      (let_statement
+        name: (identifier)
+        type: (type_identifier)
+        value: (unary_expression operand: (identifier))))))

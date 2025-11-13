@@ -1,0 +1,51 @@
+================================================================================
+Basic function declaration
+================================================================================
+
+fn main() {
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block)))
+
+================================================================================
+Function with typed parameters
+================================================================================
+
+fn add(a i32, b i32) {
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list
+      (parameter name: (identifier) type: (type_identifier))
+      (parameter name: (identifier) type: (type_identifier)))
+    body: (block)))
+
+================================================================================
+Function with return type
+================================================================================
+
+fn add(a i32, b i32) i32 {
+    return a + b
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list
+      (parameter name: (identifier) type: (type_identifier))
+      (parameter name: (identifier) type: (type_identifier)))
+    return_type: (type_identifier)
+    body: (block
+      (return_statement (binary_expression left: (identifier) right: (identifier))))))

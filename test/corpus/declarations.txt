@@ -1,0 +1,124 @@
+================================================================================
+Module and use declarations
+================================================================================
+
+module myproject::utils
+
+use std::io::File
+use core::fmt::println
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (module_declaration
+    (path
+      (identifier)
+      (identifier)))
+  (use_declaration
+    (path
+      (identifier)
+      (identifier)
+      (identifier)))
+  (use_declaration
+    (path
+      (identifier)
+      (identifier)
+      (identifier))))
+
+================================================================================
+Struct declaration
+================================================================================
+
+pub struct Point {
+    x: f64,
+    y: f64,
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (struct_declaration
+    name: (identifier)
+    fields: (field_declaration_list
+      (field_declaration name: (identifier) type: (type_identifier))
+      (field_declaration name: (identifier) type: (type_identifier)))))
+
+================================================================================
+Enum declaration
+================================================================================
+
+pub enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (enum_declaration
+    name: (identifier)
+    type_parameters: (type_parameter_list
+      (identifier)
+      (identifier))
+    variants: (enum_variant_list
+      (enum_variant
+        name: (identifier)
+        types: (type_identifier))
+      (enum_variant
+        name: (identifier)
+        types: (type_identifier)))))
+
+================================================================================
+Trait and impl declarations
+================================================================================
+
+pub trait Display {
+    fn display(&self) []u8;
+}
+
+impl Display for Point {
+    fn display(&self) []u8 {
+        return "Point"
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (trait_declaration
+    name: (identifier)
+    body: (trait_item_list
+      (trait_function_declaration
+        name: (identifier)
+        parameters: (parameter_list
+          (parameter
+            (self_parameter)))
+        return_type: (slice_type
+          element: (type_identifier)))))
+  (impl_block
+    trait: (type_identifier)
+    type: (type_identifier)
+    body: (impl_item_list
+      (function_declaration
+        name: (identifier)
+        parameters: (parameter_list
+          (parameter
+            (self_parameter)))
+        return_type: (slice_type
+          element: (type_identifier))
+        body: (block
+          (return_statement
+            (string)))))))
+
+================================================================================
+Type alias and const declarations
+================================================================================
+
+type MyInt = i32
+const PI: f64 = 3.14159
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (type_alias name: (identifier) type: (type_identifier))
+  (const_declaration name: (identifier) type: (type_identifier) value: (number)))
