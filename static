@@ -1,142 +1,0 @@
-[90m┌[0m  [1m🤖 Git Commit Assistant[0m
-[90m│[0m
-[90m│[0m [90m╭[0m[90m─[0m📝 Repository Status[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m╮[0m
-[90m│[0m [90m│[0m M  grammar.js                                                              [90m│[0m
-[90m│[0m [90m│[0m M  queries/highlights.scm                                                  [90m│[0m
-[90m│[0m [90m│[0m M  queries/locals.scm                                                      [90m│[0m
-[90m│[0m [90m│[0m M  queries/tags.scm                                                        [90m│[0m
-[90m│[0m [90m│[0m M  src/grammar.json                                                        [90m│[0m
-[90m│[0m [90m│[0m M  src/node-types.json                                                     [90m│[0m
-[90m│[0m [90m│[0m M  src/parser.c                                                            [90m│[0m
-[90m│[0m [90m│[0m A  static                                                                  [90m│[0m
-[90m│[0m [90m│[0m A  test/corpus/declarations.txt                                            [90m│[0m
-[90m│[0m [90m│[0m A  test/corpus/expressions.txt                                             [90m│[0m
-[90m│[0m [90m│[0m A  test/corpus/functions.txt                                               [90m│[0m
-[90m│[0m [90m│[0m A  test/corpus/statements.txt                                              [90m│[0m
-[90m│[0m [90m│[0m A  test/corpus/types.txt                                                   [90m│[0m
-[90m│[0m [90m╰[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m╯[0m
-[90m│[0m
-[92m◇[0m  [1m⚠️  Large changeset detected, selecting most relevant files...[0m
-[90m│[0m
-]9;4;3\[90m│[0m
-[96m◒[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude.
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◑[0m  Generating commit message with Claude..
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◒[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◐[0m  Generating commit message with Claude
-[90m│[0m[2K[1A[2K[1A[2K[90m│[0m
-[96m◓[0m  Generating commit message with Claude
-[90m│[0m]9;4;0\[2K[1A[2K[1A[2K[90m│[0m
-[92m◇[0m  Commit message generated               
-[90m│[0m
-[90m│[0m [90m╭[0m[90m─[0m📋 Proposed Commit Message[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m╮[0m
-[90m│[0m [90m│[0m Expand grammar with comprehensive type system support for YarLang v0.1.0   [90m│[0m
-[90m│[0m [90m│[0m                                                                            [90m│[0m
-[90m│[0m [90m│[0m Add static typing constructs, function signatures, type annotations, and   [90m│[0m
-[90m│[0m [90m│[0m comprehensive test coverage across declarations, expressions, statements,  [90m│[0m
-[90m│[0m [90m│[0m functions, and types to support YarLang v0.1.0 "dinamit" typing features.  [90m│[0m
-[90m│[0m [90m╰[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m─[0m[90m╯[0m
-[?25l[90m│[0m
-[96m◆[0m  Proceed with commit?
-[96m│[0m  [92m●[0m Yes [2m/[0m [2m○[0m [2mNo[0m
-[96m└[0m[A[A[A[J[90m│[0m
-[91m■[0m  Proceed with commit?
-[96m│[0m  [92m●[0m Yes [2m/[0m [2m○[0m [2mNo[0m
-[96m└[0m
-[?25h[90m│[0m
-[92m◇[0m  [1mCommit cancelled[0m
-[90m│[0m

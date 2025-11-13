@@ -460,7 +460,7 @@ module.exports = grammar({
 
     call_expression: ($) =>
       prec(
-        7,
+        15,
         seq(
           field("function", $._expression),
           field("arguments", $.argument_list),
@@ -469,7 +469,7 @@ module.exports = grammar({
 
     field_expression: ($) =>
       prec.left(
-        10,
+        15,
         seq(
           field("object", $._expression),
           ".",
@@ -479,7 +479,7 @@ module.exports = grammar({
 
     index_expression: ($) =>
       prec.left(
-        10,
+        15,
         seq(
           field("object", $._expression),
           "[",

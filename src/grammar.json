@@ -2669,7 +2669,7 @@
     },
     "call_expression": {
       "type": "PREC",
-      "value": 7,
+      "value": 15,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2694,7 +2694,7 @@
     },
     "field_expression": {
       "type": "PREC_LEFT",
-      "value": 10,
+      "value": 15,
       "content": {
         "type": "SEQ",
         "members": [
@@ -2723,7 +2723,7 @@
     },
     "index_expression": {
       "type": "PREC_LEFT",
-      "value": 10,
+      "value": 15,
       "content": {
         "type": "SEQ",
         "members": [

@@ -1,0 +1,79 @@
+================================================================================
+Hello world example
+================================================================================
+
+fn main() {
+	println("Hello, YarLang!")
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (expression_statement
+        (call_expression
+          function: (identifier)
+          arguments: (argument_list (string)))))))
+
+================================================================================
+Fibonacci example
+================================================================================
+
+fn fib(n i32) i32 {
+	if n <= 1 {
+		return n
+	}
+	return fib(n - 1) + fib(n - 2)
+}
+
+fn main() {
+	let result: i32 = fib(10)
+	println("fib(10) = ")
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list
+      (parameter name: (identifier) type: (type_identifier)))
+    return_type: (type_identifier)
+    body: (block
+      (if_statement
+        condition: (binary_expression
+          left: (identifier)
+          right: (number))
+        consequence: (block
+          (return_statement (identifier))))
+      (return_statement
+        (binary_expression
+          left: (call_expression
+            function: (identifier)
+            arguments: (argument_list
+              (binary_expression
+                left: (identifier)
+                right: (number))))
+          right: (call_expression
+            function: (identifier)
+            arguments: (argument_list
+              (binary_expression
+                left: (identifier)
+                right: (number))))))))
+  (function_declaration
+    name: (identifier)
+    parameters: (parameter_list)
+    body: (block
+      (let_statement
+        name: (identifier)
+        type: (type_identifier)
+        value: (call_expression
+          function: (identifier)
+          arguments: (argument_list (number))))
+      (expression_statement
+        (call_expression
+          function: (identifier)
+          arguments: (argument_list (string)))))))
