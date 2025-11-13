@@ -18,10 +18,12 @@ YarLang grammar for tree-sitter.
 
 ### Neovim (nvim-treesitter)
 
-**1. Add the parser configuration:**
+Add to your nvim-treesitter configuration:
 
 ```lua
-require('nvim-treesitter.parsers').get_parser_configs().yarlang = {
+-- Register the parser
+local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+parser_config.yarlang = {
   install_info = {
     url = 'https://github.com/yarlson/tree-sitter-yarlang',
     files = { 'src/parser.c' },
@@ -29,25 +31,31 @@ require('nvim-treesitter.parsers').get_parser_configs().yarlang = {
   },
   filetype = 'yar',
 }
+
+-- Auto-setup queries on first .yar file open
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'yar',
+  once = true,
+  callback = function()
+    local queries_src = vim.fn.stdpath('data') .. '/lazy/nvim-treesitter/queries/yarlang'
+    local queries_dst = vim.fn.stdpath('config') .. '/after/queries/yarlang'
+
+    if vim.fn.isdirectory(queries_src) == 1 and vim.fn.isdirectory(queries_dst) == 0 then
+      vim.fn.mkdir(queries_dst, 'p')
+      for _, file in ipairs(vim.fn.glob(queries_src .. '/*.scm', false, true)) do
+        local basename = vim.fn.fnamemodify(file, ':t')
+        vim.fn.writefile(vim.fn.readfile(file), queries_dst .. '/' .. basename)
+      end
+    end
+  end,
+})
 ```
 
-**2. Copy queries to your Neovim config:**
-
-```bash
-mkdir -p ~/.config/nvim/after/queries/yarlang
-curl -o ~/.config/nvim/after/queries/yarlang/highlights.scm https://raw.githubusercontent.com/yarlson/tree-sitter-yarlang/main/queries/highlights.scm
-curl -o ~/.config/nvim/after/queries/yarlang/locals.scm https://raw.githubusercontent.com/yarlson/tree-sitter-yarlang/main/queries/locals.scm
-curl -o ~/.config/nvim/after/queries/yarlang/tags.scm https://raw.githubusercontent.com/yarlson/tree-sitter-yarlang/main/queries/tags.scm
-curl -o ~/.config/nvim/after/queries/yarlang/injections.scm https://raw.githubusercontent.com/yarlson/tree-sitter-yarlang/main/queries/injections.scm
-```
-
-**3. Install the parser:**
+Then install:
 
 ```vim
 :TSInstall yarlang
 ```
-
-> **Note:** This manual query setup is required because yarlang is not yet in nvim-treesitter's official parser list. Once added officially, this will be automatic.
 
 ### npm
 
